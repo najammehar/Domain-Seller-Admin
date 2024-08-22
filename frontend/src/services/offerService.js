@@ -9,7 +9,8 @@ import {
     getCountReadFalseOffers
 } from '../store/offerSlice';
 
-const API_URL = 'http://localhost:3000/api/offers';
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:3000/api/offers" : "/api/offers";
+
 
 export const getOffers = (page) => async (dispatch) => {
     dispatch(getOffersStart());

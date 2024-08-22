@@ -16,7 +16,8 @@ import {
     getExtensionsFailure
 } from "../store/domainSlice.js";
 
-const API_URL = "http://localhost:3000/api/domains";
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:3000/api/domains" : "/api/domains";
+
 
 const handleResponse = async (response) => {
     const data = await response.json();

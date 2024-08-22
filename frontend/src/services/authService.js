@@ -1,6 +1,6 @@
 import { loginStart, loginSuccess, loginFailure, logout, checkAuthFailure, checkAuthSuccess, checkAuthStart } from "../store/authSlice";
 
-const API_URL = "http://localhost:3000/api/auth";
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:3000/api/auth" : "/api/auth";
 
 const handleResponse = async (response) => {
     const data = await response.json();
