@@ -1,4 +1,4 @@
-import Login from "./login";
+import Login from "./Login";
 import Domain from "./Domain";
 import Home from "./Home";
 import Offer from "./Offer";
